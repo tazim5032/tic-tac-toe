@@ -110,4 +110,10 @@ function restart(){
     document.getElementById('congo').addEventListener('click', function(e){
         location.reload();
     });
+    
+}
+function playAgain(){
+    document.getElementById('draw').addEventListener('click', function(e){
+        location.reload();
+    });
 }
