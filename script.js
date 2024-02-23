@@ -1,6 +1,7 @@
 const allBtn = document.getElementsByClassName('g');
 
-let cnt = 0, f=0;
+let cnt = 0;
+let f=0;
 let firstPlayer = [];
 let secondPlayer = [];
 for (const btn of allBtn) {
