@@ -1,6 +1,6 @@
 const allBtn = document.getElementsByClassName('g');
 
-let cnt = 0;
+let cnt = 0, f=0;
 let firstPlayer = [];
 let secondPlayer = [];
 for (const btn of allBtn) {
@@ -21,6 +21,7 @@ for (const btn of allBtn) {
                     document.getElementById('winner').innerText = 1;
                     const show = document.getElementById('congo');
                     show.classList.remove('hidden');
+                    f++;
                 }
             }
         }
@@ -37,13 +38,17 @@ for (const btn of allBtn) {
                     document.getElementById('winner').innerText = 2;
                     const show = document.getElementById('congo');
                     show.classList.remove('hidden');
+                    f++;
                 }
             }
         }
 
-
         btn.setAttribute('disabled', true);
 
+        if(cnt == 9 && f==0){
+            const show = document.getElementById('draw');
+            show.classList.remove('hidden');
+        }
     });
 }
 
